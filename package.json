@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/actions/javascript-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.5"
+    "@actions/core": "^1.2.5",
+    "wp-pot": "^1.9.7"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.24.0",
