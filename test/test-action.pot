@@ -14,9 +14,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: test.php:3
+msgid "New string from pull request"
+msgstr ""
+
+#: test.php:6
 msgid "This is a test string"
 msgstr ""
 
-#: test.php:4
+#: test.php:7
 msgid "Another test string"
 msgstr ""
