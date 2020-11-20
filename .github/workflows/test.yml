@@ -22,4 +22,6 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ./
       with:
-        milliseconds: 1000
+        source: 'test/test.php'
+        destination: 'test/test-action.pot'
+        text-domain: 'test-action'
