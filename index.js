@@ -21,6 +21,8 @@ async function run() {
     core.info(`${pot}`);
 
     // Commit the generated POT file.
+    await exec.exec(`git config --global user.email "wp-pot@wp-pot.test"`);
+    await exec.exec(`git config --global user.name "WP Pot Bot"`);
     await exec.exec(`git add ${destination}`);
     await exec.exec(`git commit -m "Automatically generated POT file"`);
     await exec.exec(`git push`);
