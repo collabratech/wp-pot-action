@@ -30,7 +30,7 @@
     "wp-pot": "^1.9.7"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.24.0",
+    "@vercel/ncc": "^0.25.1",
     "eslint": "^7.4.0",
     "jest": "^26.1.0"
   }
