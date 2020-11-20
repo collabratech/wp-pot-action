@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const exec = require('@actions/exec');
 const wpPot = require('wp-pot');
 
 
@@ -16,6 +17,11 @@ async function run() {
       destFile: destination,
       domain: text_domain,
     });
+
+    // Commit the generated POT file.
+    await exec.exec(`git add ${destination}`);
+    await exec.exec(`git commit -m "Automatically generated POT file"`);
+    await exec.exec(`git push`);
 
     core.info(`The POT file was successfully generated.`);
   } catch (error) {
