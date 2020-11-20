@@ -31,7 +31,7 @@ generate-pot:
   - uses: actions/checkout@v2
     with:
       ref: ${{ github.head_ref }}
-  - uses: ./
+  - uses: collabratech/wp-pot-action@v1
     with:
       destination: 'test/test-action.pot'
       text-domain: 'test-action'
