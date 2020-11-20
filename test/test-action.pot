@@ -16,3 +16,7 @@ msgstr ""
 #: test.php:3
 msgid "This is a test string"
 msgstr ""
+
+#: test.php:4
+msgid "Another test string"
+msgstr ""
