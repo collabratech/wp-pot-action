@@ -18,10 +18,16 @@ async function run() {
       domain: text_domain,
     });
 
+    const options = {};
+    options.listeners = {
+      stdout: core.info(data),
+      stderr: core.info(data)
+    };
+
     // Commit the generated POT file.
-    await exec.exec(`git add ${destination}`);
-    await exec.exec(`git commit -m "Automatically generated POT file"`);
-    await exec.exec(`git push`);
+    await exec.exec(`git add ${destination}`, options);
+    await exec.exec(`git commit -m "Automatically generated POT file"`, options);
+    await exec.exec(`git push`, options);
 
     core.info(`The POT file was successfully generated.`);
   } catch (error) {
