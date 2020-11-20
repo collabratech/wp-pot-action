@@ -12,11 +12,13 @@ async function run() {
 
     core.info(`Starting generation of POT file ...`);
 
-    wpPot({
+    const pot = wpPot({
       src: source,
       destFile: destination,
       domain: text_domain,
     });
+
+    core.info(`${pot}`);
 
     const options = {};
     options.listeners = {
